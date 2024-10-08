@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="automationpractice.com">
+	<listeners>
+		<listener class-name="BasePackage.AnnotationTransformer" />
+	</listeners>
+	<test name="automationpractice.com" parallel="false" preserve-order="true">
+		<classes>
+			<class name="TestPackage.TestCase_TM_User_HeaderSection">
+				<methods>
+					<include
+						name="verify_Pom_TM_User_Header_section_Profile_Dashboard" />
+					<!--In this test case, we have checked the Header section and profile section functionality.-->
+				</methods>
+			</class>
+			<class name="TestPackage.TestCase_TM_User_Team_info">
+				<methods>
+					<include name="verify_Pom_TM_User_Team_info" />
+					<!--In this test case, we have checked the TM Leads assign listing page functionality and added all super user page functionality.-->
+				</methods>
+			</class>
+			<class name="TestPackage.TestCase_TM_User_Account_Section">
+				<methods>
+					<include name="verify_Pom_TM_User_Account_section" />
+					<!--In this test case, we have  checked the Account section menu change password and signout page functionality.-->
+
+				</methods>
+			</class>
+
+		</classes>
+	</test>
+</suite>
+

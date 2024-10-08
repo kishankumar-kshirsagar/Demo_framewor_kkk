@@ -1,0 +1,105 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="automationpractice.com">
+	<listeners>
+		<listener class-name="BasePackage.AnnotationTransformer" />
+	</listeners>
+	<test name="automationpractice.com" parallel="false" preserve-order="true">
+		<classes>
+			<class name="TestPackage.Login_testCase">
+				<methods>
+					<include name="Verify_User_Can_Able_To_Login" />
+					<!--In this test case, we have checked the login functionality of the application.-->
+				</methods>
+			</class>
+
+
+			<class name="TestPackage.TestCase_HeaderSection">
+				<methods>
+					<include name="Verify_User_Can_Check_the_header_section" />
+					<!--In this test case, we have checked the functionality of the header section, edit profile, 
+					change theme, and profile section of the application.-->
+				</methods>
+			</class>
+
+			<class name="TestPackage.TestCase_ProjectSetting_Bucket">
+				<methods>
+					<include name="Verify_Pom_ProjectSetting_Bucket_1" />
+					<!--In this test case, we have  checked the functionality of the create new/add bucket with setting 
+					validation of the application.-->
+					<include name="Verify_Pom_ProjectSetting_Bucket_2" />
+					<!-- In this Test Case we have checked the bucket edit
+					update functionality.-->
+				</methods>
+			</class>
+
+			<class name="TestPackage.TestCase_Create_project">
+				<methods>
+					<include name="Verify_Pom_Create_project_1" />
+					<!-- In this Test Case we have checked the create projects
+					with bucket, without bucket and with DND toggle
+					selection.-->
+				</methods>
+			</class>
+			<class name="TestPackage.TestCase_All_projects">
+				<methods>
+					<include name="Verify_the_Pom_ProjectSetting_AllProjects" />
+					<!--In this Test Case we have checked the All project page all filters and view leads file functionality.-->
+				</methods>
+			</class>
+
+			<class name="TestPackage.TestCase_CreateAPILeads">
+				<methods>
+					<include name="Verify_Pom_ProjectSetting_CreateAPILeads" />
+					<!--In this Test Case we have checked the create leads API by curls, 
+					1) Direct curl lead creation, 2)Leads creation with API bucket, 3) Created leads get details.-->
+					<include name="Verify_Pom_ProjectSetting_ALL_API_Leads" />
+					<!--In this Test Case we have checked the all API lead page filter, 
+					pagination and view leads details functionality.-->
+				</methods>
+			</class>
+			<class name="TestPackage.TestCase_AccountSection">
+				<methods>
+					<include name="verify_Pom_AccountSection_1" />
+					<!--In this Test Case we have checked the account section signout link, Change password  and API overview page.-->
+
+				</methods>
+			</class>
+			<class name="TestPackage.TestCase_TeamMemberSetting">
+				<methods>
+					<include name="Verify_Pom_TeamMemberSetting_1" />
+					<!--In this Test Case we have checked the TM link, unlink and all TM setting pages and view and action button functonality of the all TM page.-->
+					<include name="Verify_Pom_TeamMemberSetting_2" />
+					<!--In this Test Case we have checked the TM with 0 lomit page functionality.-->
+				</methods>
+			</class>
+
+			<class name="TestPackage.TestCase_ActivityLogs">
+				<methods>
+					<include name="Verify_Pom_ActivityLogs" />
+					<!--In this Test Case we have checked the user activity logs page filter and pagination with Table headers.-->
+				</methods>
+			</class>
+			<class name="TestPackage.TestCase_Bucket_lead_distribution">
+				<methods>
+					<include name="Verify_the_Leads_distribution_From_bucket" />
+					<!--In this Test Case we have checked the user activity logs page filter and pagination with Table headers.-->
+				</methods>
+			</class>
+			<class name="TestPackage.TestCase_Leads_Distribution_check">
+				<methods>
+					<include name="Verify_Pom_Leads_Distribution_check" />
+					<!-- In this Test Case we have checked the leads distribution from the CSV with bucket and without buckets It contains two methods and if the any one of this gets failed then the Assertion failed the Test case.-->
+				</methods>
+			</class>
+			
+			<class name="TestPackage.TestCase_All_API_leads_distribution">
+				<methods>
+					<include name="Verify_the_Leads_distribution_From_ALL_Api" />
+					<!--In this Test Case we have checked the user activity logs page filter and pagination with Table headers.-->
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
+
+
